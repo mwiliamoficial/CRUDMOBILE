@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+
+  <style>
+
+    
+body{
+      background-color: rgb(56, 209, 209);
+    }
+
+    table{
+      margin-top: 50px;
+      background-color: white;
+      width: 100%;
+      border-style: solid;
+    }
+    td{
+      height:40px;
+      width: auto;
+      font-family: arial;
+      padding: 10px;
+    }
+
+    .larguralinha{
+      height: 80px;
+      font-family: Arial;
+      text-align: center;
+      font-size: 23px;
+      margin: 0px;
+    }
+
+    #titulo{
+      font-family: arial ;
+      text-align: center;
+      width: 98%;
+      height: 70px;
+      padding: 20px;
+      background-color: white;
+     
+      
+    }
+
+  </style>
+</head>
+<body>
+ 
+  <div id="titulo"><h1>Editar Registro</h1></div>
+  <% data.forEach(function(details) { %>
+    <form action="/edit/<%= details._id %>" method="POST">
+      <table border="1">
+        <tr>
+
+          <td>Nome</td>
+          <td>Sobrenome</td>
+          <td>Email</td>
+          <td>Endereço</td>
+          <td>Rg</td>
+          <td>Cpf</td>
+          <td>Telefone</td>
+          <td>Data de nascimento</td>
+          <td>Estado</td>
+      
+
+        </tr>
+
+        <tr>
+
+          <td><input type="text" value="<%= details.name %>" name="name"></td>
+          <td><input type="text" value="<%= details.surname %>" name="surname"></td>
+          <td><input type="email" value="<%= details.email %>" name="email"></td>
+          <td><input type="text" value="<%= details.senha %>" name="senha"></td>
+          <td><input type="text" value="<%= details.endereco %>" name="endereco"></td>
+          <td><input type="text" value="<%= details.rg %>" name="rg"></td>
+          <td><input type="text" value="<%= details.cpf %>" name="cpf"></td>
+          <td><input type="text" value="<%= details.telefone %>" name="telefone"></td>
+          <td><input type="text" value="<%= details.data_nascimento %>" name="data_nascimento" ></td>
+          <td >
+              <select name="estado" class="inputclass">
+                  <option><%= details.estado %></option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+              </select>  
+            </td>
+        </tr>
+      </table>
+    
+        <button><a href="/show">Voltar para Todos</a></button>
+        <button type="submit">Alterar Cadastro</button>
+
+    </form>
+  <% }) %>
+ 
+</body>
+</html>

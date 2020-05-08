@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Cadastre-se</title>
+
+  <style>
+    body{
+      background-color: rgb(56, 209, 209);
+    }
+
+    label{
+      font-family: Bold ;
+      font-size: 20px;
+      text-align: center;
+      padding-left: 150px;
+    }
+
+ 
+     /* Css dos Titulo da pagina */
+
+    #titulo{
+      font-family: arial ;
+      text-align: center;
+      width: 98%;
+      height: 70px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 30px;
+      
+    }
+
+    /* Css dos Formulario */
+
+    #formulario{
+      background-color: white;
+      /*border-style: solid;
+      border-width: 100%;*/
+      border-radius: 20px;
+      height: auto;
+      width: 97,5%;
+      margin-top: 40px;
+      padding: 25px;
+      
+    }
+
+
+    /* Css dos Inputs */
+
+    .inputclass{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      height: auto;
+      width: 560px;
+      padding:10px;
+      border-radius: 5px;
+      border-style: solid;
+      margin-left:20px ;
+    
+     
+    } 
+
+    .classradio{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 17px;
+      height: auto;
+      width: 390px;
+      padding: 10px;
+      border-radius: 5px;
+      border-style: solid;
+      border-width: 2px;
+      background-color: white;
+      margin-left:20px ;
+      
+    }
+
+
+    .divesquerda{
+        width: 50%;
+        float: left;
+    }
+    .divdireita{
+         width: 50%;
+         float:right;
+    }
+
+    .divbutton{
+        width: 100%;
+        display: inline-block;
+        margin-left:45%;
+        
+    }
+
+    .cssbutton{
+      font-size: 17px;
+      padding: 8px;
+      border: 2px solid rgb(2, 2, 2);
+      background-color: white ;
+      border-radius: 15px;
+    }
+  </style>
+
+
+</head>
+<body>
+ 
+    <div id="titulo"> <h1>Cadastro Sistema IMAID</h1> </div>
+      <div id="formulario">   
+       <form action="/show" method="POST" >
+
+            <br> <br> <br> <br> <br>
+
+            <div class="divesquerda">
+              
+                <label for="name">Nome </label>
+                <input type="text" placeholder="Nome" name="name" class="inputclass" maxlength="20"   >
+                <br> <br> <br> <br>
+                <label for="cpf">Cpf</label>
+                <input type="text" placeholder="Digite o numero do seu CPF" name="cpf" class="inputclass" maxlength="11" required >
+                <br> <br> <br> <br>
+                <label for="endereco" >Email</label>
+                <input type="email" placeholder="Digite o endereço do seu Email" name="email" class="inputclass"  required >
+                <br> <br> <br> <br>
+                <label for="endereco" >Endereço</label>
+                <input type="text" placeholder="Endereço" name="endereco" class="inputclass" required >
+                <br> <br> <br> <br>
+                <label for="endereco" >Telefone</label>
+                <input type="text" placeholder="Telefone" name="telefone" class="inputclass" required >
+                <br> <br> <br> <br>   <br> <br> <br> <br>   <br> 
+                
+              
+            
+            </div>
+
+            <div class="divdireita">
+
+                <label for="surname">Sobrenome </label>
+                <input type="text" placeholder="Sobrenome" name="surname" class="inputclass" required>
+                <br> <br> <br> <br>
+                <label for="rg">Rg</label>
+                <input type="cpf" placeholder="Digite o numero do seu RG" maxlength="10" name="rg" class="inputclass" required>
+                <br> <br> <br> <br>
+                <label for="senha">Senha</label>
+                <input type="password" placeholder="Digite sua senha" name="senha" class="inputclass" required>
+                <br> <br> <br> <br>
+                <label for="endereco">Data de nascimento </label> 
+                <input type="date" placeholder="" name="data_nascimento" class="inputclass" required >
+                <br> <br> <br> <br>
+                <label>Estado</label>
+                <select name="estado" class="inputclass">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+              </select>       
+              </div>
+         
+            <br><br> <br><br> <br><br>
+            <div class="divbutton">
+            <button type="submit" onclick="cadastrocomsucesso()" class="cssbutton" >Cadastrar</button>
+            <button class="cssbutton"><a href="/show">Lista de Cadastrados</a></button>
+            </div>
+            <script>
+              function cadastrocomsucesso(nome){
+                if(nome != null) {
+                  alert("Cadastro foi realizado com sucesso")    
+                }else{
+                  alert(" Preencha todos os campos")   
+                }
+                   
+            }
+            </script>
+        </form> 
+    </div>
+        
+</body>
+</html>

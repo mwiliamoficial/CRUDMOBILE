@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registros</title>
+</head>
+
+<style>
+  body{
+      background-color: rgb(56, 209, 209);
+    }
+
+    table{
+      margin-top: 50px;
+      background-color: white;
+      width: 100%;
+      border-style: solid;
+    }
+    td{
+      height:40px;
+      width: auto;
+      font-family: arial;
+      padding: 10px;
+    }
+
+    .larguralinha{
+      height: 80px;
+      font-family: Arial;
+      text-align: center;
+      font-size: 23px;
+      margin: 0px;
+    }
+
+    #titulo{
+      font-family: arial ;
+      text-align: center;
+      width: 98%;
+      height: 70px;
+      padding: 20px;
+      background-color: white;
+     
+      
+    }
+
+</style>
+
+<body>
+
+ <div id="titulo"><h1>Registros</h1></div>
+
+  <table border= 1px;>
+   
+        <tr class="larguralinha">
+          <div class="titulotd">
+            <td>Nome</td>
+            <td>Sobrenome</td>
+            <td>Email</td>
+            <td>Senha</td>
+            <td>Endereço</td>
+            <td>Rg</td>
+            <td>Cpf</td>
+            <td>Telefone</td>
+            <td>Data de nascimento</td>
+            <td>Estado</td>
+            <td>Editar Cadastro</td>
+            <td>Deletar Cadastro</td>
+          </div>
+        </tr>
+   
+    <tbody>
+    <% data.forEach(function(details) { %>
+        <tr>
+            <td><%= details.name %></td>
+            <td><%= details.surname %></td>
+            <td><%= details.email %></td>
+            <td><%= details.senha %></td>
+            <td><%= details.endereco %></td>
+            <td><%= details.rg %></td>
+            <td><%= details.cpf %></td>
+            <td><%= details.telefone %></td>
+            <td><%= details.data_nascimento %></td>
+            <td><%= details.estado %></td>
+            <td> <a href="/edit/<%= details._id %>">Editar Cadastro</a></td>
+            <td><a href="/delete/<%= details._id %>">Deletar Cadastro</a></td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table>
+  <br><br>
+  <button><a href="/">Realizar Novo Cadastro</a></button>
+</body>
+</html>
